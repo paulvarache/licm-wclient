@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport"
+            content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <title>L'Informatique c'est Magique</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="vendor/platform/platform.js"></script>
+        <link rel="import" href="vendor/polymer/polymer.html">
+        <link rel="import" href="vendor/font-roboto/roboto.html">
+        <link rel="import" href="vendor/paper-item/paper-item.html">
+        <link rel="import" href="vendor/paper-icon-button/paper-icon-button.html">
+        <link rel="import" href="vendor/paper-shadow/paper-shadow.html">
+        <link rel="import" href="components/angular-deps.html">
+        <link rel="import" href="components/audio-word.html">
+        <link rel="import" href="components/licm-tuto.html">
+    </head>
+    <body ng-app="LICMApp">
+        <div class="header">
+            <img src="images/bg.jpg" alt="" />
+        </div>
+        <paper-shadow z="2" class="big-fat-bar">
+            <ng-view></ng-view>
+        </paper-shadow>
+    <angular-deps></angular-deps>
+    </body>
+</html>

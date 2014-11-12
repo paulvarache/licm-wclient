@@ -1,0 +1,60 @@
+<link rel="import" href="../vendor/paper-shadow/paper-shadow.html">
+<link rel="import" href="../vendor/github-gist/github-gist.html">
+<link rel="import" href="../vendor/google-youtube/google-youtube.html">
+<link rel="import" href="../vendor/polymer-ui-card/polymer-ui-card.html">
+<link rel="import" href="youtube-thumbnail.html">
+<polymer-element name="licm-tuto" attributes="small data link">
+    <template>
+        <style>
+            .card {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .paper-tuto {
+                height: 100px;
+            }
+            .title {
+                margin: 15px;
+                font-size: 1.3em;
+            }
+            .thumbnail {
+                height: 80%;
+                margin-left: 15px;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        </style>
+        <template if="{{ small }}">
+            <polymer-ui-card class="card">
+                <paper-item class="paper-tuto">
+                    <a href="{{ link }}">
+                        <div layout horizontal class="paper-tuto">
+                            <youtube-thumbnail self-center videoid="{{ data.youtube }}" class="thumbnail"></youtube-thumbnail>
+                            <span self-center flex class="title">{{ data.title }}</span>
+                        </div>
+                    </a>
+                </paper-item>
+            </polymer-ui-card>
+            <paper-shadow z="1"></paper-shadow>
+        </template>
+        <template if="{{ !small }}">
+            <div layout vertical>
+                <h2 self-center>{{ data.title }}</h2>
+                <google-youtube videoid="{{ data.youtube }}" fluid></google-youtube>
+                <template repeat="{{ gist in data.gists }}">
+                    <github-gist gistid="{{ gist }}"></github-gist>
+                </template>
+            </div>
+        </template>
+    </template>
+    <script>
+        Polymer("licm-tuto", {
+            small: false,
+            created: function () {
+                this.data = {};
+            }
+        });
+    </script>
+</polymer-element>

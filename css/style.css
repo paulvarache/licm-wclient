@@ -1,0 +1,39 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+    font-weight: 300;
+}
+.big-fat-bar {
+    bottom: 0px;
+    min-width: 60%;
+    width: 60%;
+    margin-left: 20%;
+    background-color: #F9F9F9;
+    margin-top: 150px;
+    height: 100%;
+}
+a {
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+.title {
+    padding: 5px;
+    text-align: center;
+}
+.presentation {
+    margin: 0px;
+    padding: 15px;
+}
+.header {
+    position: absolute;
+    top: 0;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.header, .header>img {
+    width: 100%;
+}

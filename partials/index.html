@@ -1,0 +1,15 @@
+<div class="presentation">
+    <p>
+        Bonjour et bienvenu à toi, navigateur de l'Internet. Ici <audio-word src="audio/jj.mp3">je te donne (J.J. Goldman)</audio-word> accès à plus de détails sur ce que j'explique dans mes vidéos.
+    </p>
+    <p>
+        Pour éviter d'être chiant dans ces dernières, je ne rentre pas assez en profondeur (Et pourtant j'ai le matos) et ne fait que donner un avant gout de ce qu'est programmer.
+    </p>
+    <p>
+        Tu peux donc retrouver, regroupé par vidéo un détails, ou des fois juste une reformulation de ce que je baragouine.
+    </p>
+</div>
+<div class="title">Liste des épisodes</div>
+<div ng-repeat="tuto in tutos">
+    <licm-tuto small data="{{ tuto }}" link="#/tuto/{{ $index }}"></licm-tuto>
+</div>

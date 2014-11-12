@@ -1,0 +1,18 @@
+<polymer-element name="audio-word" attributes="src" on-click="{{ onClick }}">
+    <template>
+        <style>
+            :host {
+                display: inline;
+            }
+        </style>
+        <audio src="{{ src }}" id="audio"></audio>
+        <content></content>
+    </template>
+    <script charset="utf-8">
+        Polymer('audio-word', {
+            onClick: function () {
+                this.$.audio.play();
+            }
+        });
+    </script>
+</polymer-element>
